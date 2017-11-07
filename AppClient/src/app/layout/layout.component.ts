@@ -7,10 +7,12 @@ import { ToasterService } from 'angular2-toaster';
   styleUrls: ['./layout.component.css']
 })
 export class LayoutComponent implements OnInit {
+  private _currentYear;
 
   constructor(private _toaster: ToasterService) { }
 
   ngOnInit() {
+    this._currentYear = new Date().getFullYear();
   }
 
   public logoutUser() {

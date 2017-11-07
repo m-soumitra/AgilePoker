@@ -15,32 +15,43 @@
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-right">
-        <li><a class="dropdown-toggle" data-toggle="dropdown" role="button">
+        <li>
+          <a class="dropdown-toggle" data-toggle="dropdown" role="button">
             <i class="glyphicon glyphicon-user"></i>
-             </a>
+          </a>
           <ul class="dropdown-menu pull-right" id="logout">
-            <li class="dropdown-content"><a href="#"><strong>User Profile</strong></a></li>
-            <li class="dropdown-content"><a (click)="logoutUser()">Logout</a></li>
-            <li class="dropdown-content"><a href="#"><strong>Settings</strong></a></li>
+            <li class="dropdown-content">
+              <a href="#">
+                <strong>User Profile</strong>
+              </a>
+            </li>
+            <li class="dropdown-content">
+              <a (click)="logoutUser()">Logout</a>
+            </li>
+            <li class="dropdown-content">
+              <a href="#">
+                <strong>Settings</strong>
+              </a>
+            </li>
           </ul>
         </li>
       </ul>
     </div>
-    <!--/.nav-collapse -->
   </div>
-  <!--/.container-fluid -->
 </nav>
-
 <toaster-container></toaster-container>
 <div class="container main">
-
   <router-outlet> </router-outlet>
-
-
 </div>
-<footer>
-
-
-</footer>
-
-<toaster-container></toaster-container>
+<div class="row">
+  <div class="col-md-12 col-xs-12 app-footer">
+    <footer id="app-footer">
+      <div id="app-copyright" class="col-md-9 col-xs-9" style="color:blue">
+        email: mohakud.soumitra@gmail.com 
+      </div>
+      <div class="col-md-2 col-xs-2 pull-right">
+        Version : 1.0.0 &#169; {{_currentYear}}
+      </div>
+    </footer>
+  </div>
+</div>
